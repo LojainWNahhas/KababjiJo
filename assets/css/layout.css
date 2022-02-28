@@ -28,7 +28,7 @@ Press Ctrl + F to find component. Ex: "#Header";
   background: transparent; }
 
 .top-header .parallax-window {
-  min-height: 100vh; }
+  min-height: 80vh; }
 
 html {
   overflow-x: hidden; }
