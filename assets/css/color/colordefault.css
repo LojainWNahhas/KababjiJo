@@ -22,7 +22,7 @@ Press Ctrl + F to find component. Ex: "#Header";
  - #Product Single
  - #Blog Single
  - #404 Page
--------------------------------------------------------------------*/
+-------------------------------------------------------------------*
 .parallax-window {
   min-height: 400px;
   background: transparent; }
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
    #Header
    ========================================================================== */
 header {
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
   width: 100%;
   top: 0; }

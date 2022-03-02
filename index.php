@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="keywords" content="Kababji, Kababji Jordan, Order online Kebab, catering jordan, catering, Shawerma Jordan, Kabab Sandwich Jordan, Sheesh Tauk Jordan, Knafeh Jordan, Um Ali Jordan, Mashawi Jordan, Beef Shawerma Jordan, Chicken Shawerma Jordan, Shawarma Jordan, Shish Taouk Jordan">
     <meta name="author" content="Kababji Jordan">
     <title>Home</title>
-    <link rel="icon" href="http://www.kababji-jo.com/images/kababji_logo.png">
+    <link rel="icon" href="/favicon.ico">
     <!-- Bootstrap CSS-->
     <link href="assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome-->

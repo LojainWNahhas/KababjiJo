@@ -205,6 +205,8 @@ footer .swin-widget .title-widget {
 
 .about-contact-info .info-content {
   margin-bottom: 10px; }
+  .about-contact-info .info-content a{
+    color: #bcbac1 !important; }
   .about-contact-info .info-content .info-icon {
     display: table-cell; }
     .about-contact-info .info-content .info-icon i {

@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Set an alternative reply-to address
     $mail->addReplyTo($mail_replay, $title);
     //Set who the message is to be sent to
-    $mail->addAddress($mail_to, 'lojain@tipntag.com');
+    $mail->addAddress($mail_to, 'lojain');
     //Set the subject line
     $mail->Subject = $subject;
     //Set the body
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail_body    = 'Email Subscribe from website: ' . $mail_subscribe .'<br/>';
 
     //Set who the message is to be sent to
-    $mail->addAddress($mail_to, 'lojain@tipntag.com');
+    $mail->addAddress($mail_to, 'lojain');
     //Set the subject line
     $mail->Subject = $subject;
     //Set the body
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="Kababji Jordan">
 
     <title>Contact</title>
-    <link rel="icon" href="http://www.kababji-jo.com/images/kababji_logo.png">
+    <link rel="icon" href="/favicon.ico">
     <!-- Bootstrap CSS-->
     <link href="assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome-->
