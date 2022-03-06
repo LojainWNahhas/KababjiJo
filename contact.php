@@ -3,25 +3,46 @@
  * This example shows sending a message using a local sendmail binary.
  */
 
-require 'phpmailer/PHPMailerAutoload.php';
-
+// require 'phpmailer/PHPMailerAutoload.php';
+include_once("PHPMailerAutoload.php");
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
+
 // Set PHPMailer to use the sendmail transport
-$mail->isSendmail();
+// $mail->isSendmail();
 $mail->IsHTML(true);
 
 
+
+//new//
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail->Debugoutput = 'html';
+$mail->SMTPAuth = true; // authentication enabled
+$mail->SMTPSecure = 'ssl'; //Set the SMTP port number - likely to be 25, 465 or 587
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465; //Set the encryption system to use - ssl (deprecated) or tls
+$mail->Username = "info.kababji@gmail.com";
+$mail->Password = "kababji@123";
+
+
+
+// Google reCAPTCHA API key configuration 
+$siteKey     = '6LcR7rkeAAAAAO0sjc1hatmp_fiV1kQ72wH2dGO3'; 
+$secretKey     = '6LcR7rkeAAAAAIem0-IMOvbb7HyrljK_H3_B0Xxt'; 
+//end//
+
+
 $mail_reservation_status = "";
-$mail_subscribe_status = "";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['reservation'])) {
     // Set your information here
     $title      = 'Mail From Website';
     $mail_from    = $_POST['email'];
     $mail_replay  = $_POST['email'];
-    $mail_to      = 'lojain@tipntag.com';
-    $subject    = 'PHPMailer sendmail test';
+    $mail_to      = 'info.kababji@gmail.com';
+    $subject    = 'New Email from website';
     $username     = $_POST['username'];
     $phone      = $_POST['phone'];
     $message    = $_POST['message'];
@@ -34,36 +55,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Set an alternative reply-to address
     $mail->addReplyTo($mail_replay, $title);
     //Set who the message is to be sent to
-    $mail->addAddress($mail_to, 'lojain');
+    $mail->addAddress($mail_to, 'Abeer Bilal');
     //Set the subject line
     $mail->Subject = $subject;
     //Set the body
     $mail->Body = $mail_body;
+
+
+//new//
+$mail->SMTPOptions = array(
+  'ssl' => array(
+  'verify_peer' => false,
+  'verify_peer_name' => false,
+  'allow_self_signed' => true
+  )
+);
+//reCAPTCHA validation
+// if (isset($_POST['g-recaptcha-response'])) {
+  
+//   require('component/recaptcha/src/autoload.php');		
+  
+//   $recaptcha = new \ReCaptcha\ReCaptcha(SECRET_KEY);
+
+//   $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+
+//     if (!$resp->isSuccess()) {
+//       $output = json_encode(array('type'=>'error', 'text' => '<b>Captcha</b> Validation Required!'));
+//       die($output);				
+//     }	
+// }
+
+
+//end//
     if ( !$mail->send() ) {
       $mail_reservation_status = "<br><p class='text-warning'>Mailer Error: " . $mail->ErrorInfo.'</p>';
     } else {
       $mail_reservation_status = "<br><p class='text-success'>Mail Sent Successfully. Thank you!</p>";
     }
   }
-  if (isset($_POST['mail-subscribe'])) {
-    $title      = 'MailScrible From Website';
-    $mail_subscribe  = $_POST['mail-subscribe'];
-    $mail_to      = 'lojain@tipntag.com';
-    $subject    = 'Mail Subscribe from Website';
-    $mail_body    = 'Email Subscribe from website: ' . $mail_subscribe .'<br/>';
-
-    //Set who the message is to be sent to
-    $mail->addAddress($mail_to, 'lojain');
-    //Set the subject line
-    $mail->Subject = $subject;
-    //Set the body
-    $mail->Body = $mail_body;
-    if ( !$mail->send() ) {
-      $mail_subscribe_status = "<br><p class='text-warning'>Mailer Error: " . $mail->ErrorInfo .' </p>';
-    } else {
-      $mail_subscribe_status = "<br><p class='text-success'>Mail Sent Successfully. Thank you!</p>";
-    }
-  }
+  
 }
 ?>
 
@@ -149,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	                        <div class="form-group">
 	                          <div class="input-group">
 	                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-	                            <input type="email" placeholder="Email" name="email" class="form-control">
+	                            <input type="email" placeholder="Email" name="email" class="form-control" required>
 	                          </div>
 	                        </div>
 	                        <div class="form-group">
@@ -163,6 +193,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	                        <div class="form-group">
 	                          <textarea placeholder="Message" name="message" class="form-control"></textarea>
 	                        </div>
+
+                        
+
+
+                          <!-- <div class="row" style="margin-bottom:30px;">
+                  <div class="col-sm-5">
+                  <img src="captcha.php" id="captcha_image"/>
+                  <br/> <a id="captcha_reload" href="#">reload</a>
+                  </div>
+                  <div class="col-sm-6">
+                  <label for="email">Enter the code from the image here:</label>
+                  <input type="text" class="form-control" required id="captcha" name="captcha" >
+                  </div>
+                </div> -->
+
+
 	                        <div class="form-group">
                             <input type="hidden" name="reservation">
 	                          <div class="swin-btn-wrap"><button type="submit" class="swin-btn center form-submit"><span>Send</span></button></div>
