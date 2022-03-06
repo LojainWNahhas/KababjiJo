@@ -159,6 +159,9 @@ $mail->SMTPOptions = array(
     <!-- Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Script Loading Page-->
     <script src="assets/vendors/html5shiv.js"></script>
     <script src="assets/vendors/respond.min.js"></script>

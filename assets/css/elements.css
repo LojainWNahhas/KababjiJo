@@ -1283,7 +1283,7 @@ ul.nav.nav-tabs {
 
 /* #Title */
 .title {
-  font-family: 'Fontin', cursive;
+  font-family: 'Fontin', roboto;
   font-size: 50px;
   text-transform: capitalize;
   color: #29272e;
@@ -2550,12 +2550,12 @@ footer {
     .ft-fixed-area .reservation-wrap .res-title {
       font-size: 40px;
       text-align: center;
-      font-family: 'Fontin', cursive;
+      font-family: 'Fontin', roboto;
       padding-bottom: 25px; }
       .ft-fixed-area .reservation-wrap .res-title-smaller {
         font-size: 25px;
         text-align: center;
-        font-family: 'Fontin', cursive;
+        font-family: 'Fontin', roboto;
         padding-bottom: 25px;  }
     .ft-fixed-area .reservation-wrap .res-date {
       width: 60%;
@@ -2688,7 +2688,7 @@ footer {
   margin-bottom: 15px; }
 
 .add-to-card-dialog .dialog-product-title {
-  font-family: 'Fontin', cursive;
+  font-family: 'Fontin', roboto;
   font-size: 36px;
   line-height: 1;
   text-transform: capitalize;
