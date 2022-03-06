@@ -3,8 +3,8 @@
  * This example shows sending a message using a local sendmail binary.
  */
 
-// require 'phpmailer/PHPMailerAutoload.php';
-include_once("PHPMailerAutoload.php");
+require 'phpmailer/PHPMailerAutoload.php';
+
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
 
