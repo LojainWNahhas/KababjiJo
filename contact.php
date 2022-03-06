@@ -35,9 +35,19 @@ $secretKey     = '6LcR7rkeAAAAAIem0-IMOvbb7HyrljK_H3_B0Xxt';
 
 $mail_reservation_status = "";
 
+//codeat
+$postData = $statusMsg = $valErr = '';
+$status = 'error';
+//codeat
+
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['reservation'])) {
     // Set your information here
+    //codeat
+    $postData = $_POST;
+    //codeat
     $title      = 'Mail From Website';
     $mail_from    = $_POST['email'];
     $mail_replay  = $_POST['email'];
@@ -62,6 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Body = $mail_body;
 
 
+
+
 //new//
 $mail->SMTPOptions = array(
   'ssl' => array(
@@ -70,29 +82,36 @@ $mail->SMTPOptions = array(
   'allow_self_signed' => true
   )
 );
-//reCAPTCHA validation
-// if (isset($_POST['g-recaptcha-response'])) {
-  
-//   require('component/recaptcha/src/autoload.php');		
-  
-//   $recaptcha = new \ReCaptcha\ReCaptcha(SECRET_KEY);
-
-//   $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-
-//     if (!$resp->isSuccess()) {
-//       $output = json_encode(array('type'=>'error', 'text' => '<b>Captcha</b> Validation Required!'));
-//       die($output);				
-//     }	
-// }
-
 
 //end//
-    if ( !$mail->send() ) {
-      $mail_reservation_status = "<br><p class='text-warning'>Mailer Error: " . $mail->ErrorInfo.'</p>';
-    } else {
-      $mail_reservation_status = "<br><p class='text-success'>Mail Sent Successfully. Thank you!</p>";
-    }
-  }
+
+//codeat
+	// Validate reCAPTCHA box
+  if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+
+    // Verify the reCAPTCHA response
+    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+    
+    // Decode json data
+    $responseData = json_decode($verifyResponse);
+    
+    // If reCAPTCHA response is valid
+    if($responseData->success){
+
+
+          if ( !$mail->send() ) {
+            $mail_reservation_status = "<br><p class='text-warning'>Mailer Error: " . $mail->ErrorInfo.'</p>';
+          } else {
+            $mail_reservation_status = "<br><p class='text-success'>Mail Sent Successfully. Thank you!</p>";
+          }
+
+
+    }else {
+      $mail_reservation_status = "<br><p class='text-success'>Robot verification failed, please try again.</p>";  }
+
+    }     
+  }else{
+    $mail_reservation_status = "<br><p class='text-success'>Please check on the reCAPTCHA box.</p>";  }
   
 }
 ?>
@@ -145,6 +164,8 @@ $mail->SMTPOptions = array(
     <script src="assets/vendors/respond.min.js"></script>
     <script src="assets/vendors/pageloading/js/snap.svg-min.js"></script>
     <script src="assets/vendors/pageloading/sidebartransition/js/modernizr.custom.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div id="pagewrap" class="pagewrap">
@@ -195,18 +216,12 @@ $mail->SMTPOptions = array(
 	                        </div>
 
                         
+                          <div class="form__input">
+                        <!-- Google reCAPTCHA box -->
+                        <div class="g-recaptcha" data-sitekey="<?php echo $siteKey; ?>"></div>
+                      </div>
 
-
-                          <!-- <div class="row" style="margin-bottom:30px;">
-                  <div class="col-sm-5">
-                  <img src="captcha.php" id="captcha_image"/>
-                  <br/> <a id="captcha_reload" href="#">reload</a>
-                  </div>
-                  <div class="col-sm-6">
-                  <label for="email">Enter the code from the image here:</label>
-                  <input type="text" class="form-control" required id="captcha" name="captcha" >
-                  </div>
-                </div> -->
+              
 
 
 	                        <div class="form-group">
