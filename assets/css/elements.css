@@ -1291,7 +1291,10 @@ ul.nav.nav-tabs {
   .title.white-color {
     color: #ffffff; 
     font-size: 45px;
-    font-family: "Merriweather Sans", sans-serif !important;}
+    font-family: "Merriweather Sans", sans-serif !important;
+    line-height: 6rem;
+  }
+    
   .title a {
     color: #29272e; }
     .title a:hover {
