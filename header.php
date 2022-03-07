@@ -28,7 +28,7 @@
     <div class="header-main">
       <div class="container">
         <div class="open-offcanvas">&#9776;</div>
-        <div class="header-logo"><a href="index" class="logo logo-static"><img src="assets/images/logo.png" alt="Kababji" class="logo-img"></a><a href="index" class="logo logo-fixed"><img src="assets/images/logo.png" alt="Kababji" class="logo-img"></a></div>
+        <div class="header-logo"><a href="index" class="logo logo-static"><img style="width:25rem" src="assets/images/logo.svg" alt="Kababji" class="logo-img"></a><a href="index" class="logo logo-fixed"><img style="width:25rem" src="assets/images/logo.svg" alt="Kababji" class="logo-img"></a></div>
         <nav id="main-nav-offcanvas" class="main-nav-wrapper">
           <div class="close-offcanvas-wrapper"><span class="close-offcanvas">x</span></div>
           <div class="main-nav">

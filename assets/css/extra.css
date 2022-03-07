@@ -183,7 +183,8 @@ section {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  margin-bottom: 50px; }
   .menu-banner-section .heading-title {
     font-family: "Fontin"; }
   .menu-banner-section .img-left {

@@ -205,7 +205,7 @@ This file include css code conrespond for table and mobile device
   .header-transparent .logo-fixed {
     display: none; }
   .header-transparent .open-offcanvas {
-    color: #fff; }
+    color: #000; }
   .header-transparent.header-fixed > li > a {
     color: #29272e; }
   .header-transparent.header-fixed .utility-nav .search-bar {
@@ -582,6 +582,13 @@ This file include css code conrespond for table and mobile device
 
 /* #Mobile */
 @media screen and (max-width: 480px) {
+  .subscribe-wrapper .subscribe-heading {
+    float: initial !important;
+    text-align: center; }
+    .subscribe-wrapper .des {
+      text-align: center; }
+  
+
   .header-sidebar .swin-trigger-effects.btn-close {
     margin-top: 0; }
   .st-effect-1.st-menu-open .st-effect-1.st-menu {
@@ -669,7 +676,7 @@ This file include css code conrespond for table and mobile device
         right: -40px; }
     .swin-sc-title .title {
       font-size: 34px;
-      line-height: 30px; }
+      }
     .swin-sc-title.style-2 .title {
       line-height: 1.714; }
     .swin-sc-title.style-3 .title:before {
