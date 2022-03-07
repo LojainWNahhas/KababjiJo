@@ -2511,6 +2511,9 @@ padding-bottom: 5px;
   .swin-sc-contact-form.light .form-group textarea {
     background-color: #f6f6f6;
     color: #999; }
+    .captcha {
+      margin-top: 15px;
+    }
 
 /* ==========================================================================
     Footer

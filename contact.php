@@ -219,7 +219,7 @@ $mail->SMTPOptions = array(
 	                        </div>
 
                         
-                          <div class="form__input">
+                          <div class="form-group captcha">
                         <!-- Google reCAPTCHA box -->
                         <div class="g-recaptcha" data-sitekey="<?php echo $siteKey; ?>"></div>
                       </div>

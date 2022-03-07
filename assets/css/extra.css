@@ -186,7 +186,7 @@ section {
   position: relative;
   margin-bottom: 50px; }
   .menu-banner-section .heading-title {
-    font-family: "Fontin"; }
+    font-family: 'Fontin', Roboto; }
   .menu-banner-section .img-left {
     left: 15%; }
   .menu-banner-section .img-right {
