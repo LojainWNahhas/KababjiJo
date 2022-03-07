@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
  
                     <p class="des margin-bottom-20 text-center">Years ago, we started as the Kababji franchise in Lebanon, before we decided to develop into our own, emerging into the Jordanian market. Welcomed with open arms and hungry stomachs, with new menu items accommodating to the Jordanian market, we made our way into the Jordanian Restaurant Industry. And so, ten years later, our Kababji Jordan family is still growing with regular clients increasing each month.</p>
-                    <div class="swin-btn-wrap center"><a href="about.php" class="swin-btn center form-submit btn-transparent"> <span>	About Us</span></a></div>
+                    <div class="swin-btn-wrap center"><a href="about" class="swin-btn center form-submit btn-transparent"> <span>	About Us</span></a></div>
                   </div>
                 </div>
               </div>
@@ -274,7 +274,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
           <p class="des margin-bottom-20 text-center">Contact us for reservations, deliveries, catering and inquiries. Our team is always ready to help!</p>
           <div class="swin-btn-wrap center">
-            <a href="contact.php" class="swin-btn center form-submit btn-transparent" style="margin-right: 10px;"> <span>	Contact Us</span></a>
+            <a href="contact" class="swin-btn center form-submit btn-transparent" style="margin-right: 10px;"> <span>	Contact Us</span></a>
             <a href="https://bitesnbags.com/place/p7fpf9dolv-kababji" target="_blank" class="swin-btn center form-submit btn-transparent"> <span>	Order Online</span></a>
           </div>
         </div>
@@ -339,7 +339,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <div class="banner-featured-img"><img src="assets/images/catering-banner-4.jpg" alt="Kababji" class="img img-responsive">
             <div class="banner-content">
               <div class="banner-title">CATERING</div>
-              <div class="banner-subtitle">OUR CATERING SERVICES </br> FOR ALL TYPES OF OCCASIONS</div><a href="catering.php" class="swin-btn"><span>Read More</span></a>
+              <div class="banner-subtitle">OUR CATERING SERVICES </br> FOR ALL TYPES OF OCCASIONS</div><a href="catering" class="swin-btn"><span>Read More</span></a>
             </div>
           </div>
         </div>

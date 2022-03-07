@@ -29,22 +29,22 @@
     <div class="header-main">
       <div class="container">
         <div class="open-offcanvas">&#9776;</div>
-        <div class="header-logo"><a href="index.php" class="logo"><img src="assets/images/logo.png" alt="Kababji" class="logo-img"></a></div>
+        <div class="header-logo"><a href="index" class="logo"><img src="assets/images/logo.png" alt="Kababji" class="logo-img"></a></div>
         <nav id="main-nav-offcanvas" class="main-nav-wrapper">
           <div class="close-offcanvas-wrapper"><span class="close-offcanvas">x</span></div>
           <div class="main-nav">
             <ul id="main-nav" class="nav nav-pills">
-              <li id="Home"  class=""><a href="index.php" class="dropdown-toggle">Home</a><i class="fa fa-angle-down btn-open-dropdown"></i>
+              <li id="Home"  class=""><a href="index" class="dropdown-toggle">Home</a><i class="fa fa-angle-down btn-open-dropdown"></i>
               </li>
-              <li id="About" class=""><a href="about.php">About</a></li>
-              <li id="Catering" >  <a href="catering.php">Catering</a></li>
+              <li id="About" class=""><a href="about">About</a></li>
+              <li id="Catering" >  <a href="catering">Catering</a></li>
               <li class=""><a href="https://bitesnbags.com/place/p7fpf9dolv-kababji" target="_blank" class="">
                    
                   Menu</a><i class="fa fa-angle-down btn-open-dropdown"></i>
                 
               </li>
               
-              <li id="Contact" ><a href="contact.php">Contact</a></li>
+              <li id="Contact" ><a href="contact">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -57,16 +57,16 @@
     var lastPart = url.substr(url.lastIndexOf('/') + 1);
   
 
-    if (lastPart === "about.php") {
+    if (lastPart === "about") {
      document.getElementById('About').classList.add('current-menu-item');
   };
-  if (lastPart === "index.php") {
+  if (lastPart === "index") {
      document.getElementById('Home').classList.add('current-menu-item');
   };
-  if (lastPart === "catering.php") {
+  if (lastPart === "catering") {
      document.getElementById('Catering').classList.add('current-menu-item');
   };
-  if (lastPart === "contact.php") {
+  if (lastPart === "contact") {
      document.getElementById('Contact').classList.add('current-menu-item');
   };
     
