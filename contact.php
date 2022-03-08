@@ -263,12 +263,12 @@ $mail->SMTPOptions = array(
                     </div>
                     <div class="media item">
                       <div class="media-left">
-                        <div class="wrapper-icon"><a href="mailto:admin@kababji.com"><i class="icons fa fa-envelope"></i></a></div>
+                        <div class="wrapper-icon"><a href="mailto:admin@ncss.jo"><i class="icons fa fa-envelope"></i></a></div>
                       </div>
                       <div class="media-body">
                         <h4 class="media-heading title">EMail Address</h4>
                         <div class="description">
-                          <p>Admin@kababji.com</p>
+                          <p>admin@ncss.jo</p>
                         </div>
                       </div>
                     </div>
