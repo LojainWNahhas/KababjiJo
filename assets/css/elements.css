@@ -1693,9 +1693,9 @@ ul.nav.nav-tabs {
     cursor: pointer;
     z-index: 1; }
     .swin-sc-timeline-2 .timeline-item:hover .timeline-item-wrap, .swin-sc-timeline-2 .timeline-item.slick-current .timeline-item-wrap {
-      background-color: transparent; }
+      background-color: rgba(0, 0, 0, 0.5); }
     .swin-sc-timeline-2 .timeline-item:hover .timeline-year, .swin-sc-timeline-2 .timeline-item.slick-current .timeline-year {
-      color: transparent; }
+      color: #fff; }
   .swin-sc-timeline-2 .timeline-item.slick-current {
     z-index: 2;
     -ms-transform: scale(1.1, 1.1);
