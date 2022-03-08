@@ -34,13 +34,13 @@
           <div class="close-offcanvas-wrapper"><span class="close-offcanvas">x</span></div>
           <div class="main-nav">
             <ul id="main-nav" class="nav nav-pills">
-              <li id="Home"  class=""><a href="index" class="dropdown-toggle">Home</a><i class="fa fa-angle-down btn-open-dropdown"></i>
+              <li id="Home"  class=""><a href="index" class="dropdown-toggle">Home</a>
               </li>
               <li id="About" class=""><a href="about">About</a></li>
               <li id="Catering" >  <a href="catering">Catering</a></li>
               <li class=""><a href="https://bitesnbags.com/place/p7fpf9dolv-kababji" target="_blank" class="">
                    
-                  Menu</a><i class="fa fa-angle-down btn-open-dropdown"></i>
+                  Menu</a>
                 
               </li>
               

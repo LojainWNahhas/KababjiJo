@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="main-slider">
                       <div class="slides">
                         <div class="timeline-item item swin-transition">
-                          <div class="timeline-item-wrap"><span class="timeline-year swin-transition">Al Fuhais </span></div><img src="assets/images/timeline/branch-1.jpg" alt="Kababji" class="img img-responsive">
+                          <div class="timeline-item-wrap"><span class="timeline-year swin-transition">Al Fuhais </span></div><img src="assets/images/timeline/branch-1-1.jpg" alt="Kababji" class="img img-responsive">
                         </div>
                         <div class="timeline-item item swin-transition">
                           <div class="timeline-item-wrap"><span class="timeline-year swin-transition">Mecca Street</span></div><img src="assets/images/timeline/branch-2.jpg" alt="Kababji" class="img img-responsive">
@@ -245,7 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                  <img src="assets/images/google-play.png" width="5" /> 
                                 </button></a>
                               </div>
-
+                            <a class="swin-btn" href="https://kababji.page.link/order" target="_blank" style="margin-top:3rem"> Download Now </a>
                             </div>
                             
                           </div>

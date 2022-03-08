@@ -177,7 +177,7 @@ This file include css code conrespond for table and mobile device
       font-size: 14px;
       padding: 8px 5px; }
     #main-nav li .btn-open-dropdown {
-      display: inline-block;
+      display: none;
       position: absolute;
       right: 15px;
       top: 0;

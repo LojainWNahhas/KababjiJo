@@ -33,7 +33,7 @@
           <div class="close-offcanvas-wrapper"><span class="close-offcanvas">x</span></div>
           <div class="main-nav">
             <ul id="main-nav" class="nav nav-pills">
-              <li id="Home" class="current-menu-item"><a href="index" class="">Home</a><i class="fa fa-angle-down btn-open-dropdown"></i>
+              <li id="Home" class="current-menu-item"><a href="index" class="">Home</a>
               </li>
               <li id="About"   ><a href="about">About</a></li>
               <li id="Catering"  ><a href="catering">Catering</a></li>
