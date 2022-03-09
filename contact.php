@@ -56,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username     = $_POST['username'];
     $phone      = $_POST['phone'];
     $message    = $_POST['message'];
-    $mail_body    = $username .'<br/>'.
-              $phone.'<br/>'.
-              $message;
+    $mail_body    = 'Username:'. $username .'<br/>'.
+              'Phone Number:'. $phone.'<br/>'.
+              'Message:'. $message;
 
     //Set who the message is to be sent from
     $mail->setFrom($mail_from, $title);
@@ -100,7 +100,8 @@ $mail->SMTPOptions = array(
 
 
           if ( !$mail->send() ) {
-            $mail_reservation_status = "<br><p class='text-warning'>Mailer Error: " . $mail->ErrorInfo.'</p>';
+            // $mail_reservation_status = "<br><p class='text-warning'>Mailer Error: " . $mail->ErrorInfo.'</p>';
+            $mail_reservation_status = "<br><p class='text-warning'> Mail could not be sent, please try again. </p>";
           } else {
             $mail_reservation_status = "<br><p class='text-success'>Mail Sent Successfully. Thank you!</p>";
           }

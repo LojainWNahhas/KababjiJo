@@ -97,8 +97,8 @@ section {
     position: absolute;
     bottom: 0;
     left: 60%;
-    width: 30rem; 
-    padding-bottom: 50px;}
+    width: 35rem; 
+    padding-bottom: 130px;}
     
 
 .testimonial-section-02 {
@@ -248,7 +248,7 @@ section {
 
 /* Reservation */
 .page-title.page-reservation {
-  background-image: url("../images/background/her-bg-catering.jpg"); }
+  background-image: url("../images/background/her-bg-catering.jpeg"); }
 
 /* Contact */
 .page-title.page-contact {
