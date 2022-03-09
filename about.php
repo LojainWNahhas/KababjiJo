@@ -141,11 +141,12 @@
 
             <section class="partner-section-03">
               <div class="container">
-                <div data-item="2" class="swin-sc swin-sc-partner">
+                <div data-item="3" class="swin-sc swin-sc-partner">
                   <div class="main-slider">
                     <div class="slides">
                       <div class="item"><img src="assets/images/cert2.png" alt="Kababji" class="img img-responsive"></div>
                       <div class="item"><img src="assets/images/cert1.png" alt="Kababji" class="img img-responsive"></div>
+                      <div class="item"><img src="assets/images/cer3.jpg" alt="Kababji" class="img img-responsive"></div>
                     </div>
                   </div>
                 </div>
