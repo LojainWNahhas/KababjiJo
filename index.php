@@ -253,7 +253,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         
                       </div>
                     </div>
-                    <div class="img-chef"><img src="assets/images/background/mobile-1.png" alt="" class="img img-responsive"></div>
+                    <div class="img-chef"><img src="assets/images/background/mobile_1.png" alt="" class="img img-responsive"></div>
                   </div>
                 </div>
               </section>
