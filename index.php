@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Style-->
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/elements.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/extra.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/extra.css?v=1.1">
     <link rel="stylesheet" type="text/css" href="assets/css/widget.css">
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <!-- Google Font-->
